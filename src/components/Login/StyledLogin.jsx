@@ -1,28 +1,41 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const StyledLoginContainer = styled.div`
-  max-width: 400px;
-  margin: 0 auto;
+export const LoginContainer = styled.div`
+   width: 100vw;
+  height: 100vh;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
-`;
-
-const Form = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background: linear-gradient(180deg, rgba(156,205,68,1) 0%, rgba(109,195,99,1) 35%, rgba(23,175,158,1) 100%);
 `;
 
-const StyledInput = styled.input`
+export const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  justify-content: center;
+  gap: 20px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+
+`;
+
+export const StyledInput = styled.input`
   margin-bottom: 10px;
+  width: 300px;
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 3px;
 `;
 
-const Button = styled.button`
-  background-color: #007bff;
+export const Button = styled.button`
+  background-color: #4A6D44;
   color: white;
   padding: 10px;
   border: none;
@@ -30,50 +43,23 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-function LoginContainer() {
-  const [loginData, setLoginData] = useState({
-    username: '',
-    password: '',
-  });
+export const StyledTitle = styled.h2`
+  margin-bottom: 20px;
+  color: #FFFFFF;
+`;
 
-  const handleChange = (e) => {
-    setLoginData({
-      ...loginData,
-      [e.target.name]: e.target.value,
-    });
-  };
+export const SyledUser = styled.div`
+  background-color:#4A6D44;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  img {
+      max-width: 150px;
+  }
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Login data:', loginData);
-    // Aqui você pode adicionar a lógica para autenticar o usuário
-  };
-
-  return (
-    <LoginContainer>
-      <h2>Login</h2>
-      <Form onSubmit={handleSubmit}>
-        <StyledInput
-          type="text"
-          name="username"
-          placeholder="Nome de usuário"
-          value={loginData.username}
-          onChange={handleChange}
-          required
-        />
-        <StyledInput
-          type="password"
-          name="password"
-          placeholder="Senha"
-          value={loginData.password}
-          onChange={handleChange}
-          required
-        />
-        <Button type="submit">Entrar</Button>
-      </Form>
-    </LoginContainer>
-  );
-}
-
-export default StyledLoginContainer
+`
 

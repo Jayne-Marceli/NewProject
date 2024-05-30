@@ -1,38 +1,57 @@
 import styled from 'styled-components'
 
 export const CadastroContainer = styled.div`
-  max-width: 400px;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #A0BB9C;
 `;
 
 export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 600px;
+  justify-content: center;
+  gap: 20px;
+  
+  
 `;
 
 export const StyledInput = styled.input`
   margin-bottom: 10px;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 8px;
+  border: none;
+  width: 300px;
+  outline: none;
+  
 `;
 
 export const StyledButton = styled.button`
-  background-color: #007bff;
+  background-color: #4A6D44;
   color: white;
   padding: 10px;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  font-size: 15px;
+  width: 200px;
 `;
 
-export const StyledLabel = styled.label`
-  margin-bottom: 5px;
-`;
 
 export const StyledTitle = styled.h2`
   margin-bottom: 20px;
+  color: #FFFFFF;
 `;
+export const DivTermo = styled.div`
+font-size: 13px;
+text-align: center;
+
+`;
+

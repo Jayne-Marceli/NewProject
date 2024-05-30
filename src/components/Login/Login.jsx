@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { LoginContainer, FormContainer, Container, Button } from './StyledLogin' // Importa os estilos de StyledLogin
+import { LoginContainer, FormContainer, Button,StyledInput, SyledUser  } from './StyledLogin' // Importa os estilos de StyledLogin
+import Userimage from '../../assets/user.png'
 
 function Login() {
   const [loginData, setLoginData] = useState({
@@ -22,28 +23,30 @@ function Login() {
 
   return (
     <LoginContainer> {/* Usa o container estilizado de StyledLogin */}
-      <h2>Login</h2>
       <FormContainer onSubmit={handleSubmit}> {/* Usa o formcontainer estilizado de StyledLogin */}
-        <Container>
-          <label>Nome de usuário:</label>
-          <input
+      <SyledUser>
+      <img className='user' src={Userimage} alt="Usuario"/>
+      </SyledUser>
+        <section>
+          <StyledInput
+            placeholder='Userlogin'
             type="text"
             name="username"
             value={loginData.username}
             onChange={handleChange}
             required
           />
-        </Container>
-        <Container> {/* Corrige a abertura da tag div */}
-          <label>Senha:</label>
-          <input
+        </section>
+        <section> {/* Corrige a abertura da tag div */}
+          <StyledInput
+           placeholder='Password'
             type="password"
             name="password"
             value={loginData.password}
             onChange={handleChange}
             required
           />
-        </Container>
+        </section>
         <Button type="submit">Entrar</Button> {/* Usa o botão estilizado de StyledLogin */}
       </FormContainer>
     </LoginContainer>
