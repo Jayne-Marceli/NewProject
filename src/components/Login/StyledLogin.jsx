@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 export const LoginContainer = styled.div`
@@ -18,7 +17,7 @@ export const FormContainer = styled.form`
   flex-direction: column;
   align-items: center;
   width: 500px;
-  height: 400px;
+  height: 500px;
   justify-content: center;
   gap: 20px;
   border-radius: 20px;
@@ -43,9 +42,13 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-export const StyledTitle = styled.h2`
-  margin-bottom: 20px;
-  color: #FFFFFF;
+export const StyledFootter = styled.p`
+margin-bottom: 20px;
+color: #FFFFFF;
+display: flex;
+align-items: center;
+flex-direction: column;
+
 `;
 
 export const SyledUser = styled.div`
@@ -60,6 +63,7 @@ export const SyledUser = styled.div`
   img {
       max-width: 150px;
   }
+
 
 `
 

@@ -8,7 +8,7 @@ export const CadastroContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #A0BB9C;
+  background: linear-gradient(180deg, rgba(156,205,68,1) 0%, rgba(109,195,99,1) 35%, rgba(23,175,158,1) 100%);
 `;
 
 export const FormContainer = styled.form`

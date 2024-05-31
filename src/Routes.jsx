@@ -6,8 +6,8 @@ export function AppRoutes () {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Cadastro />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/Cadastro" element={<Cadastro />} />
       </Routes>
     </Router>
   )
