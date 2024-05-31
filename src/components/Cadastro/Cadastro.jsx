@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { CadastroContainer, DivTermo, FormContainer, StyledInput, StyledButton, StyledTitle } from './StyledCadastro'; // Importa os estilos de StyledLogin
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { auth, firebaseApp } from '../../services/firebaseConfig';
+import { app,auth} from '../../services/firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 
@@ -15,7 +15,7 @@ function Cadastro() {
     confirmPassword: ''
   });
 
-  const db = getFirestore(firebaseApp);
+  const db = getFirestore(app);
   const usersCollectionRef = collection(db, 'users');
 
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -41,7 +41,7 @@ function Cadastro() {
         email: formData.email,
         date: formData.date,
       });
-      navigate('/Login'); // Redireciona para a página de login após o cadastro bem-sucedido
+      navigate('/'); // Redireciona para a página de login após o cadastro bem-sucedido
     } catch (error) {
       console.error('Erro ao criar o usuário: ', error);
     }
